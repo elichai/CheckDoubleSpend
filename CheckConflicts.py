@@ -5,7 +5,7 @@ Conflicted = -1
 import bitcoin
 bitcoin.SelectParams("mainnet")
 from bitcoin.rpc import Proxy
-from bitcoin.core import (lx, b2lx, b2x, x)
+from bitcoin.core import lx
 import binascii
 import time
 BTC = 100000000.0
@@ -15,8 +15,8 @@ proxy = Proxy()
 Myrawtx = proxy.getrawtransaction(lx(Mytx))
 
 mempoolHash = set()
-mempoolRaw = []
-mempoolHR = {}
+mempoolRaw = list()
+mempoolHR = dict()
 for i in range(1):
     mempoolHash = mempoolHash.union(set(proxy.getrawmempool()))
     print len(mempoolHash)
