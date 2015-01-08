@@ -4,6 +4,7 @@ import bitcoin
 from bitcoin.core import (lx, x)
 import sys
 
+
 def getraw(proxy, mytx):
 
     try:

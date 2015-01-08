@@ -53,7 +53,7 @@ blacklist = [BlackList(0x06f1b6, 0x06f1b6, "SatoshiDice"),
              BlackList(0x06c06f, 0x06c06f, "SatoshiBones"),
              BlackList(0xda5dde, 0xda5dde, "Lucky Bit")]
 
-rawtx = transactionTools.getraw(args.TrantasctionID)
+rawtx = transactionTools.getraw(proxy, args.TrantasctionID)
 if _check_output_address(rawtx):
     print "Your transaction dosen't send money to SPAM addresses" \
           "or usses inputs from SPAM addresses"
